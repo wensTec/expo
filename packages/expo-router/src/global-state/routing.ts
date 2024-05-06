@@ -126,7 +126,7 @@ export type LinkToOptions = {
   relativeToDirectory?: boolean;
 
   /**
-   *
+   * Include the anchor when navigating to a new navigator
    */
   withAnchor?: boolean;
 };
@@ -243,6 +243,7 @@ function getNavigateAction(
     payload.screen = actionStateRoute.name;
     // Merge the params, ensuring that we create a new object
     payload.params = { ...params };
+
     // Params don't include the screen, thats a separate attribute
     delete payload.params['screen'];
 

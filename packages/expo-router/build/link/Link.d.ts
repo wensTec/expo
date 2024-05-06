@@ -33,6 +33,7 @@ export declare function Redirect({ href }: {
     href: Href;
 }): null;
 /**
+<<<<<<< HEAD
  * Component that renders a link using [`href`](#href) to another route.
  * By default, it accepts children and wraps them in a `<Text>` component.
  *

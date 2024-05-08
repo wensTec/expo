@@ -3,9 +3,9 @@ import { GestureResponderEvent, Platform } from 'react-native';
 
 import * as expo from '../fork/getPathFromState-forks';
 import { useExpoRouter } from '../global-state/router-store';
-import { LinkToOptions } from '../global-state/routing';
 import { stripGroupSegmentsFromPath } from '../matchers';
 import { emitDomLinkEvent } from './useDomComponentNavigation';
+import { LinkToOptions } from '../global-state/routing';
 
 function eventShouldPreventDefault(
   e: MouseEvent<HTMLAnchorElement> | GestureResponderEvent

@@ -465,6 +465,7 @@ const general = [
         makePage('accounts/two-factor.mdx'),
         makePage('accounts/programmatic-access.mdx'),
         makePage('accounts/sso.mdx'),
+        makePage('accounts/audit-logs.mdx'),
       ]),
       makeSection('Billing', [
         makePage('billing/overview.mdx'),

@@ -1354,8 +1354,6 @@ module.exports = {
             'autoFocus',
             'barCodeScannerEnabled',
             'barCodeScannerSettings',
-            'faceDetectorEnabled',
-            'faceDetectorSettings',
             'flashMode',
             'focusDepth',
             'pictureSize',

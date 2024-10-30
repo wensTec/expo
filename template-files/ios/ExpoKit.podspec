@@ -38,8 +38,4 @@ ${IOS_EXPOKIT_DEPS}
     # Universal modules required by ExpoKit so the code compiles
     ss.dependency 'ExpoModulesCore'
   end
-
-  s.subspec "FaceDetector" do |ss|
-    ss.dependency "EXFaceDetector"
-  end
 end

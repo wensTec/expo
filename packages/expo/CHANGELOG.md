@@ -11,6 +11,7 @@
 ### 💡 Others
 
 - Re-exported `@expo/fingerprint` as `expo/fingerprint`. ([#32494](https://github.com/expo/expo/pull/32494) by [@quinlanj](https://github.com/quinlanj))
+- Re-exported `expo-modules-autolinking` as `expo/autolinking`. ([#32554](https://github.com/expo/expo/pull/32554) by [@tsapeta](https://github.com/tsapeta))
 
 ## 52.0.0-preview.18 — 2024-10-31
 

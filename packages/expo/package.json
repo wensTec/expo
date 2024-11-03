@@ -35,6 +35,8 @@
     "fetch.d.ts",
     "fingerprint.js",
     "fingerprint.d.ts",
+    "autolinking.js",
+    "autolinking.d.ts",
     "react-native.config.js",
     "requiresExtraSetup.json",
     "tsconfig.base.json",

@@ -8,7 +8,7 @@ export type SearchOptions = {
   silent?: boolean;
 };
 
-type AutolinkingModule = typeof import('expo-modules-autolinking/exports');
+type AutolinkingModule = typeof import('expo/autolinking');
 
 /**
  * Imports the `expo-modules-autolinking` package installed in the project at the given path.
@@ -24,15 +24,14 @@ function tryRequireExpoModulesAutolinking(projectRoot: string): AutolinkingModul
   const resolveOptions = { paths: [projectRoot] };
 
   try {
-    resolvedAutolinkingPath = require.resolve('expo-modules-autolinking/exports', resolveOptions);
-  } catch {}
-  // Fallback to the older version of expo-modules-autolinking
-  try {
-    resolvedAutolinkingPath = require.resolve(
-      'expo-modules-autolinking/build/autolinking',
-      resolveOptions
-    );
-  } catch {}
+    // Autolinking is exported from the `expo` package as of SDK 52
+    resolvedAutolinkingPath = require.resolve('expo/autolinking', resolveOptions);
+  } catch {
+    // Fallback to require from `expo-modules-autolinking` on SDK 50 and 51
+    try {
+      resolvedAutolinkingPath = require.resolve('expo-modules-autolinking/exports', resolveOptions);
+    } catch {}
+  }
 
   if (!resolvedAutolinkingPath) {
     throw new Error(

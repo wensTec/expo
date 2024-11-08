@@ -3,7 +3,7 @@ title: Audit logs
 description: Learn how to track and analyze your account's activities by using the audit logs.
 ---
 
-## What are audit logs?
+> **info** Audit logs are available for [Enterprise plan](https://expo.dev/pricing) customers.
 
 Audit logs record actions made with Expo Application Services (EAS) by accounts. Recorded data includes information about the affected entities, the type of modification made to them, who performed the action, and when the activity occurred.
 
@@ -13,7 +13,7 @@ Since audit logs can only be created and never modified or deleted, they serve a
 
 To access them, go to **Account settings** > [**Audit logs**](https://expo.dev/accounts/[account]/settings/audit-logs).
 
-## Audit log use cases
+## Use cases
 
 ### Permission monitoring
 
@@ -27,7 +27,7 @@ An Expo organization account can include many projects where development access 
 
 The Apple devices listed within Expo's team settings will only show devices that are currently registered to an account, but with the creation of audit logs, historical modifications of Apple teams and devices can be viewed.
 
-## Where are audit logs in use?
+## Entities
 
 While we are working on adding more entities in future, the following entities are already enabled:
 
@@ -45,19 +45,23 @@ While we are working on adding more entities in future, the following entities a
 - User Invitations
 - User Permissions
 
-# Understanding Audit logs
+## Structure
 
 Audit log entries include the following fields:
 
 - **Actor**: the account actor that performed the particular action
-- **Entity Type**: the object that was modified with the one of the modification types &mdash; CREATE, UPDATE, DELETE
-- **Mutation Type**: the type of modification, CREATE, UPDATE, DELETE
+- **Entity Type**: the object that was modified with the one of the modification types &mdash; `CREATE`, `UPDATE`, `DELETE`
+- **Mutation Type**: the type of modification, `CREATE`, `UPDATE`, `DELETE`
 - Created At: when the particular action was performed
 
 Additionally, clicking on an Audit log row, you can view the metadata relevant to that log.
 
-## Exporting Audit logs
+| a   | b   |
+| --- | --- |
+| x   | x   |
 
-Audit logs can be exported in the following file formats: CSV, JSON, and JSONL.
+## Export
 
-A time range must be included in the request, with a maximum range of 30 days. The exported file will include all the fields shown on the Audit logs page except for the **Message** field.
+Audit logs can be exported in the following file formats: CSV, JSON, and JSONL from the page in **Account settings** > [**Audit logs**](https://expo.dev/accounts/[account]/settings/audit-logs).
+
+Export is available with a time range of up to 30 days. The exported file will include all the fields shown on the Audit logs page except for the **Message** field.

@@ -46,7 +46,7 @@ public class PushTokenModule: Module {
     AsyncFunction("getDevicePushTokenAsync") { (promise: Promise) in
       Task { @MainActor in
         if promiseNotYetResolved != nil {
-          promise.reject("E_AWAIT_PROMISE", "Another async call to this method is in progress. Await the first Promise.")
+          promise.reject("E_AWAIT_PROMISE", "Another async call to 'getDevicePushTokenAsync' method is in progress. Await the first Promise.")
         }
         promiseNotYetResolved = promise
         UIApplication.shared.registerForRemoteNotifications()

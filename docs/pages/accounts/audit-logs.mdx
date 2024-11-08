@@ -9,7 +9,9 @@ Audit logs record actions made with Expo Application Services (EAS) by accounts.
 
 Since audit logs can only be created and never modified or deleted, they serve as a source of truth to help monitor events and debug issues occurring within accounts.
 
-**Audit logs are available to Enterprise plan customers**. When subscribed, some of the logs used internally by Expo are immediately available, while other types of logs are collected after the subscription is activated.
+**Audit logs are available to Enterprise plan customers**. When subscribed, some of the logs used internally by Expo are immediately available, while other types of logs are starting to be collected after the subscription is activated.
+
+Audit logs are stored for 1.5 years. In case an account is deleted, its audit logs will be deleted no later than 90 days after.
 
 To access them, go to **Account settings** > [**Audit logs**](https://expo.dev/accounts/[account]/settings/audit-logs).
 
@@ -27,7 +29,7 @@ An Expo organization account can include many projects where development access 
 
 The Apple devices listed within Expo's team settings will only show devices that are currently registered to an account, but with the creation of audit logs, historical modifications of Apple teams and devices can be viewed.
 
-## Entities
+## Audit log entities
 
 While we are working on adding more entities in future, the following entities are already enabled:
 
@@ -45,20 +47,18 @@ While we are working on adding more entities in future, the following entities a
 - User Invitations
 - User Permissions
 
-## Structure
+### Structure
 
 Audit log entries include the following fields:
 
-- **Actor**: the account actor that performed the particular action
-- **Entity Type**: the object that was modified with the one of the modification types &mdash; `CREATE`, `UPDATE`, `DELETE`
-- **Mutation Type**: the type of modification, `CREATE`, `UPDATE`, `DELETE`
-- Created At: when the particular action was performed
+| Field         | Description                                                                                               |
+| ------------- | --------------------------------------------------------------------------------------------------------- |
+| Actor         | The account actor that performed the particular action.                                                   |
+| Entity Type   | The object that was modified with the one of the modification types &mdash; `CREATE`, `UPDATE`, `DELETE`. |
+| Mutation Type | The type of modification, `CREATE`, `UPDATE`, `DELETE`.                                                   |
+| Created At    | When the particular action was performed.                                                                 |
 
 Additionally, clicking on an Audit log row, you can view the metadata relevant to that log.
-
-| a   | b   |
-| --- | --- |
-| x   | x   |
 
 ## Export
 

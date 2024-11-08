@@ -288,7 +288,11 @@ const general = [
     ],
     { expanded: false }
   ),
-  makeSection('EAS', [makePage('eas/index.mdx'), makePage('eas/json.mdx')]),
+  makeSection('EAS', [
+    makePage('eas/index.mdx'),
+    makePage('eas/json.mdx'),
+    makeGroup('Reference', [makePage('eas/environment-variables.mdx')]),
+  ]),
   makeSection('EAS Build', [
     makePage('build/introduction.mdx'),
     makePage('build/setup.mdx'),
@@ -528,6 +532,7 @@ const learn = [
       makePage('tutorial/eas/team-development.mdx'),
       makePage('tutorial/eas/using-github.mdx'),
       makePage('tutorial/eas/next-steps.mdx'),
+      makePage('tutorial/eas/environment-variables.mdx'),
     ],
     { expanded: true }
   ),
